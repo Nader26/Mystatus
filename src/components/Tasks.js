@@ -16,16 +16,13 @@ function Tasks() {
     if (selected1 & selected2 & selected3) setIsComplete(true);
     else setIsComplete(false);
   }, [selected1, selected2, selected3]);
-
+  const reset = () => {
+    localStorage.setItem("workout", false);
+    localStorage.setItem("neck", false);
+    localStorage.setItem("meditation", false);
+  };
   return (
     <div>
-      {/* <button
-        onClick={() => {
-          console.log(selected1);
-        }}
-      >
-        click me
-      </button> */}
       <div className=" justify-center flex mt-10  ">
         <form
           action=""
@@ -65,6 +62,11 @@ function Tasks() {
           <h1 className="complete px-5 py-1 rounded-md text-2xl tracking-widest">
             {isComplete ? "ATTA BOY!" : "Are you a pussy?"}
           </h1>
+          {isComplete && (
+            <button onClick={reset} className="bg-white rounded-md px-3">
+              Reset
+            </button>
+          )}
         </form>
       </div>
     </div>
