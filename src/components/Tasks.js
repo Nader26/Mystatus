@@ -21,7 +21,6 @@ function Tasks() {
     localStorage.setItem("neck", false);
     localStorage.setItem("meditation", false);
   };
-  setInterval(reset, 1000 * 5);
   return (
     <div>
       <div className=" justify-center flex mt-10  ">
@@ -34,7 +33,7 @@ function Tasks() {
             id="workout"
             label="30 mins workout"
             onChange={(e) => {
-              localStorage.setItem("workout", `${e.target.checked}`);
+              localStorage.setItem("workout", e.target.checked);
               setSelected1(e.target.checked);
               console.log(e.target.checked);
             }}
@@ -44,7 +43,7 @@ function Tasks() {
             id="meditation"
             label="10 mins meditation"
             onChange={(e) => {
-              localStorage.setItem("meditation", `${e.target.checked}`);
+              localStorage.setItem("meditation", e.target.checked);
               setSelected2(e.target.checked);
               console.log(e.target.checked);
             }}
@@ -54,7 +53,7 @@ function Tasks() {
             id="neck"
             label="2 sets neck training"
             onChange={(e) => {
-              localStorage.setItem("neck", `${e.target.checked}`);
+              localStorage.setItem("neck", e.target.checked);
               setSelected3(e.target.checked);
               console.log(e.target.checked);
             }}
