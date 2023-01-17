@@ -21,6 +21,7 @@ function Tasks() {
     localStorage.setItem("neck", false);
     localStorage.setItem("meditation", false);
   };
+  setInterval(reset, 1000 * 5);
   return (
     <div>
       <div className=" justify-center flex mt-10  ">
