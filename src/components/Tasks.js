@@ -24,7 +24,7 @@ function Tasks() {
   return (
     <div>
       <div className=" justify-center flex mt-10  ">
-        <form action="" className="flex flex-col items-center gap-5  mb-10  ">
+        <form action="" className="flex flex-col items-center gap-5   ">
           <Checkbox
             checked={selected1}
             id="workout"
@@ -57,10 +57,13 @@ function Tasks() {
             {isComplete ? "ATTA BOY!" : "Are you a pussy?"}
           </h1>
           {isComplete && (
-            <button onClick={reset} className="bg-white rounded-md px-3">
+            <button onClick={reset} className="bg-white rounded-md px-3  mb-6">
               Reset
             </button>
           )}
+          <div className="text-white text-center text-2xl mb-6 capitalize font-semibold">
+            Don't play games, your life IS the game!
+          </div>
         </form>
       </div>
     </div>
