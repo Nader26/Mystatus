@@ -24,10 +24,7 @@ function Tasks() {
   return (
     <div>
       <div className=" justify-center flex mt-10  ">
-        <form
-          action=""
-          className="flex flex-col items-center gap-5 absolute bottom-10  "
-        >
+        <form action="" className="flex flex-col items-center gap-5  mb-10  ">
           <Checkbox
             checked={selected1}
             id="workout"
@@ -35,7 +32,6 @@ function Tasks() {
             onChange={(e) => {
               localStorage.setItem("workout", e.target.checked);
               setSelected1(e.target.checked);
-              console.log(e.target.checked);
             }}
           />
           <Checkbox
@@ -45,7 +41,6 @@ function Tasks() {
             onChange={(e) => {
               localStorage.setItem("meditation", e.target.checked);
               setSelected2(e.target.checked);
-              console.log(e.target.checked);
             }}
           />
           <Checkbox
@@ -55,7 +50,6 @@ function Tasks() {
             onChange={(e) => {
               localStorage.setItem("neck", e.target.checked);
               setSelected3(e.target.checked);
-              console.log(e.target.checked);
             }}
           />
 
